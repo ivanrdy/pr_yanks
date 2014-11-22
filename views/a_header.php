@@ -1,7 +1,7 @@
 <header class="header">
     <a href="beranda" class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
-       TigaTours Travel
+       Yanks Tour and Tourism
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation">

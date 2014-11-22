@@ -17,7 +17,7 @@
                         <div class="col-sm-12">
                             <h4 class="page-header">
                                 Panel Admin Yanks Tour and Transport Travel&reg;
-                                <small>Disini admin dapat me-<i>review</i> testimoni, paket wisata dan galeri. Klik navigasi di sebelah kiri untuk lebih lengkapnya.</small>
+                                <small>Disini admin dapat me-<i>review</i> paket wisata dan galeri. Klik navigasi di sebelah kiri untuk lebih lengkapnya.</small>
                             </h4>
                             
                             <div class='col-sm-12' style='margin-bottom:10px'>                        

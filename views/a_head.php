@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>TigaTours Travel | Admin</title>
+    <title>Yanks Tour and Tourism | Admin</title>
     <link rel="icon" href="assets/img/ICON 2.png">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- bootstrap 3.0.2 -->
