@@ -25,7 +25,7 @@
         <div class="footer-border"></div>
         <div class="row">
             <div class="copyright span4">
-                <p>Copyright 2012 Andia - All rights reserved. Template by <a href="http://azmind.com">Azmind</a>.</p>
+                <p>&copy; CV Yanks Tours and Travel - 2014. Template by <a href="http://azmind.com">Azmind</a>.</p>
             </div>
             <div class="social span8">
                 <a class="facebook" href=""></a>

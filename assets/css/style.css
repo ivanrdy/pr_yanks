@@ -72,12 +72,14 @@ strong { font-weight: bold; }
 
 .header ul.nav li a {
     padding: 30px 20px 10px 20px;
+    padding-bottom: 38px;
     color: #5d5d5d;
     text-shadow: none;
 }
 
 .header ul.nav li.current-page a {
     padding-top: 25px;
+    padding-bottom: 38px;
     border-top: 5px solid #9d426b;
     background: #f8f8f8;
 }

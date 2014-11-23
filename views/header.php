@@ -9,27 +9,54 @@
                         <span class="icon-bar"></span>
                     </a>
                     <h1>
-                        <a class="brand" href="index.html">Andia - a super cool design agency...</a>
+                        <a class="brand" href="beranda">CV Yanks Tours & Transport</a>
                     </h1>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
-                            <li class="current-page">
-                                <a href="index.html"><i class="icon-home"></i><br />Home</a>
-                            </li>
+                        <?php 
+                            if($_GET['page']=='home'){
+                                echo"<li  class='current-page'>";
+                            }else{
+                        ?>
                             <li>
-                                <a href="portfolio.html"><i class="icon-camera"></i><br />Portfolio</a>
+                        <?php } ?>
+                                <a href="beranda"><i class="fa fa-home"></i><br />Beranda</a>
                             </li>
+                        <?php 
+                            if($_GET['page']=='paket'){
+                                echo"<li  class='current-page'>";
+                            }else{
+                        ?>   
                             <li>
-                                <a href="#"><i class="icon-comments"></i><br />Blog</a>
+                        <?php } ?>
+                                <a href="paket"><i class="fa fa-th-list"></i><br />Paket Wisata</a>
                             </li>
+                        <?php 
+                            if($_GET['page']=='kendaraan'){
+                                echo"<li  class='current-page'>";
+                            }else{
+                        ?>
                             <li>
-                                <a href="services.html"><i class="icon-tasks"></i><br />Services</a>
+                        <?php } ?>
+                                <a href="kendaraan"><i class="fa fa-car"></i><br />Rental Mobil</a>
                             </li>
+                        <?php 
+                            if($_GET['page']=='hotel'){
+                                echo"<li  class='current-page'>";
+                            }else{
+                        ?>
                             <li>
-                                <a href="about.html"><i class="icon-user"></i><br />About</a>
+                        <?php } ?>
+                                <a href="hotel"><i class="fa fa-building-o"></i><br />Hotel</a>
                             </li>
+                        <?php 
+                            if($_GET['page']=='kontak'){
+                                echo"<li  class='current-page'>";
+                            }else{
+                        ?>
                             <li>
-                                <a href="contact.html"><i class="icon-envelope-alt"></i><br />Contact</a>
+                        <?php } ?>
+                                <a href="kontak"><i class="fa fa-envelope-o"></i><br />Kontak</a>
                             </li>
                         </ul>
                     </div>
