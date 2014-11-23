@@ -12,7 +12,7 @@
         // if(empty($_SESSION['name'])){
         //     include("error.html");
         // }else{
-        //     include("views/a_header.php");
+             include("views/a_header.php");
              	
             	switch($_GET['page']){
 

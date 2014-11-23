@@ -521,13 +521,6 @@
           } else {
             slider.slides.eq(slider.currentSlide).css({ "opacity": 0, "zIndex": 1 });
             slider.slides.eq(target).css({ "opacity": 1, "zIndex": 2 });
-            
-            slider.slides.unbind("webkitTransitionEnd transitionend");
-            slider.slides.eq(slider.currentSlide).bind("webkitTransitionEnd transitionend", function() {
-              // API: after() animation Callback
-              vars.after(slider);
-            });
-            
             slider.animating = false;
             slider.currentSlide = slider.animatingTo;
           }
@@ -821,7 +814,7 @@
     startAt: 0,                     //Integer: The slide that the slider should start on. Array notation (0 = first slide)
     slideshow: true,                //Boolean: Animate slider automatically
     slideshowSpeed: 7000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
-    animationSpeed: 1000,            //Integer: Set the speed of animations, in milliseconds
+    animationSpeed: 600,            //Integer: Set the speed of animations, in milliseconds
     initDelay: 0,                   //{NEW} Integer: Set an initialization delay, in milliseconds
     randomize: false,               //Boolean: Randomize slide order
     
@@ -833,8 +826,8 @@
     video: false,                   //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
     
     // Primary Controls
-    controlNav: false,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-    directionNav: false,             //Boolean: Create navigation for previous/next navigation? (true/false)
+    controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+    directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)
     prevText: "Previous",           //String: Set the text for the "previous" directionNav item
     nextText: "Next",               //String: Set the text for the "next" directionNav item
     
@@ -882,7 +875,7 @@
         if ($slides.length === 1) {
           $slides.fadeIn(400);
           if (options.start) options.start($this);
-        } else if ($this.data('flexslider') == undefined) {
+        } else if ($this.data('flexslider') === undefined) {
           new $.flexslider(this, options);
         }
       });
