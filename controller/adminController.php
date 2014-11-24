@@ -267,12 +267,12 @@
 
 				if($query){ 
 				   echo ("<SCRIPT LANGUAGE='JavaScript'>
-							 window.alert('Deskripsi TigaTours berhasil diperbarui.')
+							 window.alert('Deskripsi Yanks Tour and Tourismberhasil diperbarui.')
 							 window.location.href='mint-edit-deskripsi'
 							 </SCRIPT>");
 				}else{
 					echo ("<SCRIPT LANGUAGE='JavaScript'>
-							 window.alert('Deskripsi TigaTours gagal diperbarui.')
+							 window.alert('Deskripsi Yanks Tour and Tourism gagal diperbarui.')
 							 window.location.href='mint-edit-deskripsi'
 							 </SCRIPT>");
 				} 
@@ -641,7 +641,7 @@
 
     			if(count($errors) === 0) {
     				$lokasi_file = $_FILES['gambar']['tmp_name'];
-    				$dir = "../assets/img/lokasi/";
+    				$dir = "../assets/img//";
     				$ukuran = $_FILES['gambar']['size'];
     				move_uploaded_file($lokasi_file,$dir.$gambar);
     				$query = mysql_query("INSERT INTO hotel(id,nama,alamat,deskripsi,gambar,status)
@@ -861,7 +861,7 @@
 
     		    		 					if(count($errors) === 0) {
     		    		 						$lokasi_file = $_FILES['gambar']['tmp_name'];
-    		    		 						$dir = "../assets/img/hotel/";
+    		    		 						$dir = "../assets/img/car/";
     		    		 						$ukuran = $_FILES['gambar']['size'];
     		    		 						move_uploaded_file($lokasi_file,$dir.$gambar);
     		    		 						$query = mysql_query("UPDATE car SET nama='$nama', harga_bandung='$harga_bandung', harga_jakarta='$harga_jakarta', harga_bdg_jkt='$harga_bdg_jkt', gambar='$gambar' WHERE id=$id");

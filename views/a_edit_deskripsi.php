@@ -18,7 +18,7 @@
                         <div class='col-md-12'>
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title"><i class="fa fa-info"></i> Ubah Informasi Kontak TigaTours Travel</h3>
+                                    <h3 class="box-title"><i class="fa fa-info"></i> Ubah Informasi Kontak Yanks Tour and Tourism</h3>
                                         <div class="box-tools pull-right">
                                         <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                         </div>
@@ -74,7 +74,7 @@
                                  $q = mysql_fetch_array(mysql_query("SELECT * FROM deskripsi"));
                                  ?>
                                 <div class="box-header">
-                                   <h3 class="box-title"><i class="fa fa-info"></i> Ubah Deskripsi Layanan TigaTours Travel</h3>
+                                   <h3 class="box-title"><i class="fa fa-info"></i> Ubah Deskripsi Layanan Yanks Tour and Tourism</h3>
                                         <div class="box-tools pull-right">
                                         <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                         </div>
