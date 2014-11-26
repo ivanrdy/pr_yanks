@@ -4,8 +4,8 @@
         <div class="row">
             <div class="span12">
                 <i class="icon-tasks page-title-icon"></i>
-                <h2>Services /</h2>
-                <p>Here are the services we offer</p>
+                <h2>Paket Wisata</h2>
+                <p>Beragam Paket Wisata yang Kami tawarkan untuk liburan anda</p>
             </div>
         </div>
     </div>
@@ -74,10 +74,10 @@
     <div class="row">
         <div class="call-to-action-text span12">
             <div class="ca-text">
-                <p>Lorem ipsum <span class="violet">dolor sit amet</span>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ut wisi enim.</p>
+                <p>Tertarik untuk menggunakan jasa CV <span class="violet">Yanks Tour and Transport</span>? Silahkan hubungi contact person kami dan dapatkan berbagai penawaran menarik!</p>
             </div>
             <div class="ca-button">
-                <a href="">Try It Now!</a>
+                <a href="kontak">Hubungi Kami</a>
             </div>
         </div>
     </div>

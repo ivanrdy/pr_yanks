@@ -3,8 +3,8 @@
         <div class="row">
             <div class="span12">
                 <i class="icon-camera page-title-icon"></i>
-                <h2>Galeri /</h2>
-                <p>Here is the work we've done so far</p>
+                <h2>Galeri</h2>
+                <p>Beberapa momen kami bersama para pelanggan CV Yanks Tour and Transport</p>
             </div>
         </div>
     </div>

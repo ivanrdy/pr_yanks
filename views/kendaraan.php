@@ -4,8 +4,7 @@
         <div class="row">
             <div class="span12">
                 <i class="icon-user page-title-icon"></i>
-                <h2>About Us /</h2>
-                <p>Below you can find more information about our company</p>
+                <h2>Kendaraan</h2>
             </div>
         </div>
     </div>

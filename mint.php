@@ -33,9 +33,8 @@
                     case 'galeri'               :   include ("views/a_galeri.php");
                                                     break;
                     case 'editgaleri'           :   include ("views/a_edit_galeri.php");
-                                                    break;                               
-                    case 'testimoni'            :   include ("views/a_testimoni.php");                                                       
-                                                    break;                                
+                                                    break;                            
+                           
                     case 'readMsg'              :   include ("views/a_read.php");                                                       
                                                     break;         
                     case 'paket'                :   include ("views/a_paket.php");                                                                              

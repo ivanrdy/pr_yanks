@@ -1,4 +1,3 @@
-<!-- Slider -->
 <div class="slider">
     <div class="container">
         <div class="row">
@@ -30,8 +29,8 @@
 
 <!-- Site Description -->
 <div class="presentation container">
-    <h2>We are <span class="violet">Andia</span>, a super cool design agency.</h2>
-    <p>We design beautiful websites, logos and prints. Your project is safe with us.</p>
+    <h2>Selamat Datan di CV <span class="violet">Yanks Tour and Transport</span>, agen travel terpercaya di kota Bandung.</h2>
+    <p>Kami menyediakan berbagai paket wisata, hotel dan kendaraan untuk liburan anda</p>
 </div>
 
 <!-- Services -->
@@ -75,7 +74,7 @@
 <!-- Latest Work -->
 <div class="portfolio container">
     <div class="portfolio-title">
-        <h3>Our Latest Work</h3>
+        <h3>Lokasi Wisata</h3>
     </div>
     <div class="row">
         <div class="work span3">
@@ -117,12 +116,11 @@
     </div>
 </div>
 
-<!-- Testimonials -->
+<!-- <!-- Testimonials -->
 <div class="testimonials container">
     <div class="testimonials-title">
-        <h3>Testimonials</h3>
     </div>
-    <div class="row">
+<!--     <div class="row">
         <div class="testimonial-list span12">
             <div class="tabbable tabs-below">
                 <div class="tab-content">
@@ -151,5 +149,5 @@
                </ul>
            </div>
         </div>
-    </div>
+    </div> -->
 </div>

@@ -61,12 +61,7 @@
                         <i class="fa fa-picture-o"></i> <span>Paket</span>
                     </a>
                 </li>
-                <li>
-                    <a href="mint-testi-1">
-                        <i class="fa fa-th"></i> <span>Testimoni</span>
-                    </a>
-                </li>
-                <?php 
+                              <?php 
                     if($_GET['page']=='home' || $_GET['page']=='paket' || $_GET['page']=='cms' ||$_GET['page']=='testimoni' || $_GET['page']=='editpaket'){
                 ?>
                 <li class="treeview">
