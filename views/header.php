@@ -50,6 +50,15 @@
                                 <a href="hotel"><i class="fa fa-building-o"></i><br />Hotel</a>
                             </li>
                         <?php 
+                            if($_GET['page']=='galeri'){
+                                echo"<li  class='current-page'>";
+                            }else{
+                        ?>
+                            <li>
+                        <?php } ?>
+                                <a href="galeri-1"><i class="fa fa-picture-o"></i><br />Galeri</a>
+                            </li>
+                        <?php 
                             if($_GET['page']=='kontak'){
                                 echo"<li  class='current-page'>";
                             }else{

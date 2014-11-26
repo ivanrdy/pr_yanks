@@ -59,7 +59,7 @@ strong { font-weight: bold; }
 .header a.brand {
     display: inline-block;
     text-indent: -9999px;
-    width: 280px;
+    width: 200px;
     height: 63px;
     padding: 30px 0;
     background: url(../img/logo.png) 20px center no-repeat;

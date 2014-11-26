@@ -19,6 +19,8 @@
         			       			break;
         		case 'kontak'	:	include("views/kontak.php");
         							break;
+                case 'galeri'   :   include("views/galeri.php");
+                                    break;
                 case 'kendaraan':   include("views/kendaraan.php");
                                     break;
                 case 'hotel'    :   include("views/hotel.php");
