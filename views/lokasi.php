@@ -19,116 +19,31 @@
             </h4>
         </div>
     </div>
+
     <div class="row">
+
         <ul class="portfolio-img">
+    <?php 
+                    $data   = (mysql_query("SELECT * FROM lokasi"));
+                    $p      = new pagingShowGaleri;
+                    $batas  = 16;
+                    $posisi = $p->cariPosisi($batas);
+                    $a      = mysql_query("SELECT * FROM lokasi WHERE status='Aktif' ORDER BY nama DESC LIMIT $posisi, $batas");
+                    if(mysql_num_rows($a)==0){
+                        echo"<i>Tidak ada lokasi untuk ditampilkan.</i>";
+                    }else{
+                    while($r=mysql_fetch_array($a)){
+                ?> 
             <li data-id="p-1" data-type="web-design" class="span3">
                 <div class="work">
                     <a href="assets/img/portfolio/work1.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work1.jpg" alt="">
+                        <img src="assets/img/lokasi/<?php echo $r['gambar'] ?>" alt="">
                     </a>
-                    <h4>Lorem Website</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                    <h4><?php echo $r['nama'] ?></h4>
+                    <p><?php echo $r['deskripsi'] ?>.</p>
                 </div>
             </li>
-            <li data-id="p-2" data-type="logo-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work2.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work2.jpg" alt="">
-                    </a>
-                    <h4>Ipsum Logo</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-3" data-type="print-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work3.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work3.jpg" alt="">
-                    </a>
-                    <h4>Dolor Prints</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-4" data-type="web-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work4.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work4.jpg" alt="">
-                    </a>
-                    <h4>Sit Amet Website</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-5" data-type="logo-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work5.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work5.jpg" alt="">
-                    </a>
-                    <h4>Consectetur Logo</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-6" data-type="print-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work6.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work6.jpg" alt="">
-                    </a>
-                    <h4>Adipisicing Print</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-7" data-type="web-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work7.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work7.jpg" alt="">
-                    </a>
-                    <h4>Elit Website</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-8" data-type="print-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work8.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work8.jpg" alt="">
-                    </a>
-                    <h4>Sed Do Prints</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-9" data-type="web-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work9.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work9.jpg" alt="">
-                    </a>
-                    <h4>Eiusmod Website</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-10" data-type="logo-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work10.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work10.jpg" alt="">
-                    </a>
-                    <h4>Tempor Logo</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-11" data-type="web-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work11.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work11.jpg" alt="">
-                    </a>
-                    <h4>Incididunt Website</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
-            <li data-id="p-12" data-type="print-design" class="span3">
-                <div class="work">
-                    <a href="assets/img/portfolio/work12.jpg" rel="prettyPhoto">
-                        <img src="assets/img/portfolio/work12.jpg" alt="">
-                    </a>
-                    <h4>Ut Labore Print</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                </div>
-            </li>
+        <?php }} ?>
         </ul>
-    </div>
+        </div>
 </div>

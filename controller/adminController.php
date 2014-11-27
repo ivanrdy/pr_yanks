@@ -641,7 +641,7 @@
 
     			if(count($errors) === 0) {
     				$lokasi_file = $_FILES['gambar']['tmp_name'];
-    				$dir = "../assets/img//";
+    				$dir = "../assets/img/hotel/";
     				$ukuran = $_FILES['gambar']['size'];
     				move_uploaded_file($lokasi_file,$dir.$gambar);
     				$query = mysql_query("INSERT INTO hotel(id,nama,alamat,deskripsi,gambar,status)

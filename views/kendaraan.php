@@ -14,11 +14,22 @@
     <div class="team-title">
         <h3>Mobil dan Van</h3>
     </div>
+    <?php 
+                    $data   = (mysql_query("SELECT * FROM car"));
+                    $p      = new pagingShowGaleri;
+                    $batas  = 16;
+                    $posisi = $p->cariPosisi($batas);
+                    $a      = mysql_query("SELECT * FROM car WHERE status='Aktif' ORDER BY nama DESC LIMIT $posisi, $batas");
+                    if(mysql_num_rows($a)==0){
+                        echo"<i>Tidak ada kendaraan untuk ditampilkan.</i>";
+                    }else{
+                    while($r=mysql_fetch_array($a)){
+                ?> 
     <div class="row">
-        <div class="team-text span3">
-            <img src="assets/img/team/1.jpg" alt="">
-            <h4>Nama Mobil</h4>
-            <h3><strong>Rp.600.000</strong></h3>
+        <div class="team-text span3" style="overflow:hidden">
+            <img src="assets/img/car/<?php echo $r['gambar'] ?>" alt="">
+            <h4><?php echo $r['nama'] ?></h4>
+            <h3><strong><?php echo $r['harga_bandung'] ?></strong></h3>
             <div class="social-links">
                <!--  <a class="money" href=""></a>
                 <a class="twitter" href=""></a>
@@ -26,40 +37,7 @@
                 <a class="email" href=""></a> -->
             </div>
         </div>
-        <div class="team-text span3">
-            <img src="assets/img/team/2.jpg" alt="">
-            <h4>Nama Mobil</h4>
-            <h3><strong>Rp.600.000</strong></h3>
-            <div class="social-links">
-               <!--  <a class="facebook" href=""></a>
-                <a class="twitter" href=""></a>
-                <a class="linkedin" href=""></a>
-                <a class="email" href=""></a> -->
-            </div>
-        </div>
-        <div class="team-text span3">
-            <img src="assets/img/team/3.jpg" alt="">
-            <h4>Nama Mobil</h4>
-            <h3><strong>Rp.600.000</strong></h3>
-            <div class="social-links">
-               <!--  <a class="facebook" href=""></a>
-                <a class="twitter" href=""></a>
-                <a class="linkedin" href=""></a>
-                <a class="email" href=""></a> -->
-            </div>
-        </div>
-        <div class="team-text span3">
-            <img src="assets/img/team/4.jpg" alt="">
-            <h4>Nama Mobil</h4>
-           <h3><strong>Rp.600.000</strong></h3>
-            <div class="social-links">
-                <!-- <a class="facebook" href=""></a>
-                <a class="twitter" href=""></a>
-                <a class="linkedin" href=""></a>
-                <a class="email" href=""></a> -->
-            </div>
-        </div>
-    </div>
+        <?php } } ?>
 </div>
 <!-- About Us Text -->
 <div class="about-us container">
