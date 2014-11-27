@@ -1,0 +1,16 @@
+---Overall---
+
+Paket belum tampil
+Login
+Div di beranda, kendaraan, hotel, lokasi, galeri masih gurinjal-gurinjul
+
+---Home---
+Slider beranda harus di resize yang gambar utamanya
+
+---Footer---
+Mitra kami belum bisa dimunculin (taro www.sulampesona.com) aja
+Galeri masih belum muncul
+
+---Kontak---
+Maps belum nembak ke lokasi sebenarnya
+

@@ -36,7 +36,7 @@
                      ?> 
                  <li data-id="p-1" data-type="web-design" class="span3">
                      <div class="work">
-    <!--                      <a href="assets/img/portfolio/work1.jpg" rel="prettyPhoto"> -->
+                         <a href="assets/img/hotel/<?php echo $r['gambar'] ?>" rel="#">
                              <img src="assets/img/hotel/<?php echo $r['gambar'] ?>" alt="">
                          </a>
                          <h4><?php echo $r['nama'] ?></h4>

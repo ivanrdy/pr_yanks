@@ -2,29 +2,36 @@
     <div class="container">
         <div class="row">
             <div class="span10 offset1">
+
                 <div class="flexslider">
+                
                     <ul class="slides">
-                        <li data-thumb="assets/img/slider/1.jpg">
-                            <img src="assets/img/slider/1.jpg">
-                            <p class="flex-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur.</p>
-                        </li>
-                        <li data-thumb="assets/img/slider/2.jpg">
-                            <img src="assets/img/slider/2.jpg">
-                            <p class="flex-caption">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </li>
-                        <li data-thumb="assets/img/slider/5.jpg">
-                            <img src="assets/img/slider/5.jpg">
-                            <p class="flex-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur.</p>
-                        </li>
-                        <li data-thumb="assets/img/slider/6.jpg">
-                            <img src="assets/img/slider/6.jpg">
-                            <p class="flex-caption">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </li>
+                    <?php 
+                                    $data   = (mysql_query("SELECT * FROM lokasi"));
+                                    $p      = new pagingShowGaleri;
+                                    $batas  = 16;
+                                    $posisi = $p->cariPosisi($batas);
+                                    $a      = mysql_query("SELECT * FROM lokasi WHERE status='Aktif' ORDER BY nama DESC LIMIT $posisi, $batas");
+                                    if(mysql_num_rows($a)==0){
+                                        echo"<i>Tidak ada lokasi untuk ditampilkan.</i>";
+                                    }else{
+                                    while($r=mysql_fetch_array($a)){
+                                ?> 
+                        <li data-thumb="assets/img/lokasi/<?php echo $r['gambar'] ?>">                                         
+                         <img src="assets/img/lokasi/<?php echo $r['gambar'] ?>">
+                            <p class="flex-caption"><?php echo $r['deskripsi'] ?>.</p>
+                            <?php }} ?> 
+                        </li> 
+
                     </ul>
                 </div>
+
             </div>
+           
         </div>
+
     </div>
+
 </div>
 
 <!-- Site Description -->
@@ -74,44 +81,31 @@
 <!-- Latest Work -->
 <div class="portfolio container">
     <div class="portfolio-title">
-        <h3>Lokasi Wisata</h3>
+        <h3>Hotel</h3>
     </div>
     <div class="row">
+    <?php 
+                    $data   = (mysql_query("SELECT * FROM hotel"));
+                    $p      = new pagingShowGaleri;
+                    $batas  = 16;
+                    $posisi = $p->cariPosisi($batas);
+                    $a      = mysql_query("SELECT * FROM hotel WHERE status='Aktif' ORDER BY nama DESC LIMIT $posisi, $batas");
+                    if(mysql_num_rows($a)==0){
+                        echo"<i>Tidak ada hotel untuk ditampilkan.</i>";
+                    }else{
+                    while($r=mysql_fetch_array($a)){
+                ?> 
         <div class="work span3">
-            <img src="assets/img/portfolio/work1.jpg" alt="">
-            <h4>Lorem Website</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-            <div class="icon-awesome">
+            <img src="assets/img/hotel/<?php echo $r['gambar'] ?>" alt="">
+            <h4><?php echo $r['nama'] ?></h4>
+            <p><?php echo $r['deskripsi'] ?></p>
+            <!-- <div class="icon-awesome">
                 <a href="assets/img/portfolio/work1.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
                 <a href="portfolio.html"><i class="icon-link"></i></a>
-            </div>
+            </div> -->
         </div>
-        <div class="work span3">
-            <img src="assets/img/portfolio/work2.jpg" alt="">
-            <h4>Ipsum Logo</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-            <div class="icon-awesome">
-                <a href="assets/img/portfolio/work2.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
-                <a href="portfolio.html"><i class="icon-link"></i></a>
-            </div>
-        </div>
-        <div class="work span3">
-            <img src="assets/img/portfolio/work3.jpg" alt="">
-            <h4>Dolor Prints</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-            <div class="icon-awesome">
-                <a href="assets/img/portfolio/work3.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
-                <a href="portfolio.html"><i class="icon-link"></i></a>
-            </div>
-        </div>
-        <div class="work span3">
-            <img src="assets/img/portfolio/work4.jpg" alt="">
-            <h4>Sit Amet Website</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-            <div class="icon-awesome">
-                <a href="assets/img/portfolio/work4.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
-                <a href="portfolio.html"><i class="icon-link"></i></a>
-            </div>
+        <?php }} ?>
+       
         </div>
     </div>
 </div>
