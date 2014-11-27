@@ -48,16 +48,7 @@
                             <li>
                         <?php } ?>
                                 <a href="lokasi"><i class="fa fa-location-arrow"></i><br />Lokasi Wisata</a>
-                            </li>
-                        <?php 
-                            if($_GET['page']=='hotel'){
-                                echo"<li  class='current-page'>";
-                            }else{
-                        ?>
-                            <li>
-                        <?php } ?>
-                                <a href="hotel"><i class="fa fa-building-o"></i><br />Hotel</a>
-                            </li>
+                            </li>                        
                         <?php 
                             if($_GET['page']=='galeri'){
                                 echo"<li  class='current-page'>";
