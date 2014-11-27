@@ -40,33 +40,33 @@
             <div class="icon-awesome">
                 <i class="icon-eye-open"></i>
             </div>
-            <h4>Beautiful Websites</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-            <a href="services.html">Read more</a>
+            <h4>Pelayanan Terbaik</h4>
+            <p>CV Yanks Tour and Transport memberikan pelayanan terbaik dan maksimal kepada para wisatawan yang ingin berlibur</p>
+            <a href="kontak">Lihat Selengkapnya</a>
         </div>
         <div class="service span3">
             <div class="icon-awesome">
                 <i class="icon-table"></i>
             </div>
-            <h4>Responsive Layout</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-            <a href="services.html">Read more</a>
+            <h4>Berbagai Kendaraan untuk Perjalanan Anda</h4>
+            <p>Kami menawarkan berbagai macam kendaraan berikut supir yang bisa anda gunakan untuk menjelajah kota Bandung selama berlibur</p>
+            <a href="kendaraan">Lihat Selengkapnya</a>
         </div>
         <div class="service span3">
             <div class="icon-awesome">
                 <i class="icon-magic"></i>
             </div>
-            <h4>Awesome Logos</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-            <a href="services.html">Read more</a>
+            <h4>Harga yang Terjangkau</h4>
+            <p>Tidak perlu pusing dengan harga yang mahal, CV Yanks Tour and Travel memberikan pelayanan prima dan beragam paket wisata dengan harga yang bersahabat</p>
+            <a href="paket">Lihat Selengkapnya</a>
         </div>
         <div class="service span3">
             <div class="icon-awesome">
                 <i class="icon-print"></i>
             </div>
-            <h4>High Res Prints</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-            <a href="services.html">Read more</a>
+            <h4>Berbagai Pilihan Destinasi Lokasi Wisata</h4>
+            <p>Kami akan memandu anda untuk menikmati lokasi wisata terkenal di Bandung</p>
+            <a href="lokasi">Lihat Selengkapnya</a>
         </div>
     </div>
 </div>

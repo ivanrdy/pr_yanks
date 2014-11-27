@@ -41,6 +41,15 @@
                                 <a href="kendaraan"><i class="fa fa-car"></i><br />Rental Mobil</a>
                             </li>
                         <?php 
+                            if($_GET['page']=='lokasi'){
+                                echo"<li  class='current-page'>";
+                            }else{
+                        ?>
+                            <li>
+                        <?php } ?>
+                                <a href="lokasi"><i class="fa fa-location-arrow"></i><br />Lokasi Wisata</a>
+                            </li>
+                        <?php 
                             if($_GET['page']=='hotel'){
                                 echo"<li  class='current-page'>";
                             }else{
