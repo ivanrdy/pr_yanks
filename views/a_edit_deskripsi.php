@@ -84,20 +84,20 @@
                                     <table class='table'>
                                         <tr>
                                             <div class="form-group">
-                                                <label for="deskripsi"><i class='fa fa-check'></i> Layanan TigaTours</label>
-                                                <textarea name='layanan' class='form-control full-width' placeholder="Deskripsi TigaTours"><?php echo $q['layanan']; ?></textarea>
+                                                <label for="deskripsi"><i class='fa fa-check'></i> Layanan Yanks Tour and Tourism</label>
+                                                <textarea name='layanan' class='form-control full-width' placeholder="Deskripsi Yanks Tour and Tourism"><?php echo $q['layanan']; ?></textarea>
                                             </div>                                        
                                         </tr>
                                         <tr>
                                             <div class="form-group">
-                                                <label for="keunggulan"><i class='fa fa-plus'></i> Keunggulan TigaTours</label>
-                                                <textarea name='keunggulan' class='form-control full-width' placeholder="Keunggulan TigaTours"><?php echo $q['keunggulan']; ?></textarea>
+                                                <label for="keunggulan"><i class='fa fa-plus'></i> Keunggulan Yanks Tour and Tourism</label>
+                                                <textarea name='keunggulan' class='form-control full-width' placeholder="Keunggulan Yanks Tour and Tourism"><?php echo $q['keunggulan']; ?></textarea>
                                             </div>
                                         </tr>
                                         <tr>
                                             <div class="form-group">
-                                                <label for="layanan"><i class='fa fa-wrench'></i> Tentang TigaTours</label>
-                                                <textarea name='tentang_kami' class='form-control full-width' placeholder="Layanan TigaTours"><?php echo $q['tentang_kami']; ?></textarea>
+                                                <label for="layanan"><i class='fa fa-wrench'></i> Tentang Yanks Tour and Tourism</label>
+                                                <textarea name='tentang_kami' class='form-control full-width' placeholder="Layanan Yanks Tour and Tourism"><?php echo $q['tentang_kami']; ?></textarea>
                                             </div>
                                         </tr>
                                     </table>

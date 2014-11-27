@@ -15,10 +15,7 @@
     <div class="row">
         <div class="portfolio-navigator span12">
             <h4 class="filter-portfolio">
-                <a class="all" id="active-imgs" href="#">All</a> /
-                <a class="web-design" id="" href="#">Web Design</a> /
-                <a class="logo-design" id="" href="#">Logo Design</a> /
-                <a class="print-design" id="" href="#">Print Design</a>
+                <a class="all" id="active-imgs" href="#">Galeri</a>            
             </h4>
         </div>
     </div>

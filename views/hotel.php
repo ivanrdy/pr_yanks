@@ -3,8 +3,8 @@
         <div class="row">
             <div class="span12">
                 <i class="icon-camera page-title-icon"></i>
-                <h2>Hotel /</h2>
-                <p>Here is the work we've done so far</p>
+                <h2>Hotel </h2>
+                <p>Berbagai pilihan hotel untuk anda menginap</p>
             </div>
         </div>
     </div>
@@ -15,10 +15,7 @@
     <div class="row">
         <div class="portfolio-navigator span12">
             <h4 class="filter-portfolio">
-                <a class="all" id="active-imgs" href="#">All</a> /
-                <a class="web-design" id="" href="#">Web Design</a> /
-                <a class="logo-design" id="" href="#">Logo Design</a> /
-                <a class="print-design" id="" href="#">Print Design</a>
+                <a class="all" id="active-imgs" href="#">Hotel</a>                
             </h4>
         </div>
     </div>

@@ -1,6 +1,8 @@
 <div class="page-title">
     <div class="container">
         <div class="row">
+    
+
             <div class="span12">
                 <i class="icon-envelope-alt page-title-icon"></i>
                 <h2>Kontak Kami</h2>
@@ -11,22 +13,38 @@
 </div>
 
 <!-- Contact Us -->
+<?php
+
+$con = mysql_fetch_array(mysql_query("SELECT * FROM deskripsi"));
+
+?>
+
 <div class="contact-us container">
     <div class="row">
         <div class="contact-form span7">
             <h4>Tentang CV Yanks Tour and Transport</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <span class="violet">suscipit lobortis</span> nisl ut aliquip ex ea commodo consequat. Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <strong>eiusmod tempor</strong> incididunt.</p>
+            <p><?php echo $con['tentang_kami'] ?></p>
             <h4>Layanan Kami</h4>
-            <p>Lorem ipsum dolor sit amet, <span class="violet">consectetur adipisicing</span> elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> elit, sed do eiusmod <span class="violet">tempor incididunt</span> ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+            <p><?php echo $con['layanan'] ?></p>
             <h4>Keunggulan Kami</h4>
-            <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis <span class="violet">nostrud exerci</span> tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+            <p><?php echo $con['keunggulan'] ?></p>
         </div>
+        <?php
+
+        $con = mysql_fetch_array(mysql_query("SELECT * FROM kontak"));
+
+        ?>
         <div class="contact-address span5">
             <h4>Lokasi Kami</h4>
             <div class="map"></div>
-            <h4>Address</h4>
-            <p>Via Principe Amedeo 9 <br> 10100, Torino, TO, Italy</p>
-            <p>Phone: 0039 333 12 68 347</p>
+            <h4>Alamat</h4>
+            <p><?php echo $con['alamat'] ?></p>
+            <h4>Phone:</h4>
+            <p> <?php echo $con['telpon_1'] ?></p>
+            <h4>Whatsapp:</h4>
+            <p> <?php echo $con['telpon_2'] ?></p>
+            <h4>Email:</h4>
+            <p> <?php echo $con['email'] ?></p>
         </div>
     </div>
 </div>

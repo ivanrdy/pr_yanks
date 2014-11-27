@@ -1,31 +1,43 @@
 <footer>
     <div class="container">
+    <?php
+
+    $con = mysql_fetch_array(mysql_query("SELECT * FROM deskripsi"));
+
+    ?>
         <div class="row">
             <div class="widget span3">
                 <h4>Tentang Kami</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                <p><a href="">Read more...</a></p>
+                <p><?php echo $con['tentang_kami'] ?></p>
+                <p><a href="kontak">Selengkapnya...</a></p>
             </div>
             <div class="widget span3">
                 <h4>Mitra Kami</h4>
-                <div class="show-tweets"></div>
+                <div class="show-tweets"><p>
+               </p>
+               </div>
             </div>
             <div class="widget span3">
                 <h4>Galeri</h4>
                 <ul class="flickr-feed"></ul>
             </div>
+            <?php
+
+            $con = mysql_fetch_array(mysql_query("SELECT * FROM kontak"));
+
+            ?>
             <div class="widget span3">
                 <h4>Kontak Kami</h4>
-                <p><i class="icon-map-marker"></i> Address: Via Principe Amedeo 9, 10100, Torino, TO, Italy</p>
-                <p><i class="icon-phone"></i> Phone: 0039 333 12 68 347</p>
-                <p><i class="icon-user"></i> Skype: Andia_Agency</p>
-                <p><i class="icon-envelope-alt"></i> Email: <a href="">contact@andia.co.uk</a></p>
+                <p><i class="icon-map-marker"></i> Alamat: <?php echo $con['alamat'] ?></p>
+                <p><i class="icon-phone"></i> Telepon: <?php echo $con['telpon_1'] ?></p>
+                <p><i class="icon-user"></i> Whatsapp: <?php echo $con['telpon_2'] ?></p>
+                <p><i class="icon-envelope-alt"></i> Email: <a href=""><?php echo $con['email'] ?></a></p>
             </div>
         </div>
         <div class="footer-border"></div>
         <div class="row">
             <div class="copyright span4">
-                <p>&copy; CV Yanks Tours and Travel - 2014. Template by <a href="http://azmind.com">Azmind</a>.</p>
+                <p>&copy; CV Yanks Tours and Travel</p>
             </div>
             <div class="social span8">
                 <a class="facebook" href=""></a>
