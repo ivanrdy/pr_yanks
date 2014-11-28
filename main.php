@@ -27,7 +27,11 @@
                                     break;
                 case 'hotel'    :   include("views/hotel.php");
                                     break;
-                case 'login'    :   include("views/login.php");
+                case 'login'    :   if(isset($_SESSION['name'])){    
+                                        header("location:beranda");
+                                    }else{
+                                        header("location:ins");
+                                    }
                                     break;
         		default 		:	include("views/home.php");
 

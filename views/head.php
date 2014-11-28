@@ -20,8 +20,48 @@
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="assets/js/jquery-1.8.2.min.js"></script>
 
     <!-- Favicon and touch icons -->
     <link rel="icon" href="assets/img/icon.png">
+
+    <!-- Imagefit -->
+    <script src="assets/js/jquery.imagefit.js"></script> 
+
+    <script type='text/javascript'>
+        $('#imgfit').imagefit({
+            mode: 'outside',
+            force : 'true',
+            halign : 'center',
+            valign : 'middle'
+        });
+
+        $(window).load(function() {
+            $('#imgfit').imagefit();
+        });        
+    </script> 
+
+    <!-- Google Map -->
+
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/js/jquery.gmap3.min.js"></script>   
+        
+    <!-- Google Map Init-->
+    <script type="text/javascript">
+        jQuery(function($){
+            $('.map').gmap3({
+                marker:{
+                    address: '-6.995808, 107.642361' 
+                },
+                    map:{
+                    options:{
+                    zoom: 15,
+                    scrollwheel: false,
+                    streetViewControl : true
+                    }
+                }
+            });
+        });
+    </script>
 
 </head>

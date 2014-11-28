@@ -11,61 +11,46 @@
     </div>
 </div>
 
-<!-- Services Full Width Text -->
-<div class="services-full-width container">
-    <div class="row">
-        <div class="services-full-width-text span12">
-            <h4>Lorem Ipsum Dolor Sit Amet</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <span class="violet">suscipit lobortis</span> nisl ut aliquip ex ea commodo consequat. Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <strong>eiusmod tempor</strong> incididunt.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Services -->
-<div class="what-we-do container">
-    <div class="row">
-        <div class="service span3">
-            <div class="icon-awesome">
-                <i class="icon-eye-open"></i>
-            </div>
-            <h4>Beautiful Websites</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-        </div>
-        <div class="service span3">
-            <div class="icon-awesome">
-                <i class="icon-table"></i>
-            </div>
-            <h4>Responsive Layout</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-        </div>
-        <div class="service span3">
-            <div class="icon-awesome">
-                <i class="icon-magic"></i>
-            </div>
-            <h4>Awesome Logos</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-        </div>
-        <div class="service span3">
-            <div class="icon-awesome">
-                <i class="icon-print"></i>
-            </div>
-            <h4>High Res Prints</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-        </div>
-    </div>
-</div>
-
 <!-- Services Half Width Text -->
 <div class="services-half-width container">
     <div class="row">
-        <div class="services-half-width-text span6">
-            <h4>Lorem Ipsum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <span class="violet">suscipit lobortis</span> nisl ut aliquip ex ea commodo consequat. Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <strong>eiusmod tempor</strong> incididunt.</p>
+        <?php 
+            $data   = (mysql_query("SELECT * FROM paket"));
+            $p      = new pagingShowGaleri;
+            $batas  = 16;
+            $posisi = $p->cariPosisi($batas);
+            $a      = mysql_query("SELECT * FROM paket WHERE status='Aktif' ORDER BY id DESC LIMIT $posisi, $batas");
+            if(mysql_num_rows($a)==0){
+                echo"<i>Tidak ada paket untuk ditampilkan.</i>";
+            }else{
+            while($r=mysql_fetch_array($a)){
+        ?> 
+        <div class="panel panel-primary span6">            
+            <div class="services-half-width-text">
+                <h4><?php echo $r['paket'] ?></h4>
+                <p>
+                    <ul>
+                    <?php 
+                        $fac = explode("\n", $r['fasilitas']);
+                        foreach($fac as $lines){
+                           ?>
+                            <li><?php echo $lines ?></li>
+                           <?php
+                        }
+                    ?>
+                    </ul>
+                </p>
+                <table class="table span5">
+                    <tr>
+                        <th>Durasi</th><th>Ongkos (RM)</th>
+                    </tr>
+                    <tr>
+                        <td><?php echo $r['durasi'] ?></td><td><?php echo $r['ongkos_bandung'] ?></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="services-half-width-text span6">
-            <h4>Dolor Sit Amet</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <span class="violet">suscipit lobortis</span> nisl ut aliquip ex ea commodo consequat. Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <strong>eiusmod tempor</strong> incididunt.</p>
-        </div>
+        <?php } } ?>
     </div>
 </div>
 

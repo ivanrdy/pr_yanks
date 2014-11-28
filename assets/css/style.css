@@ -175,6 +175,7 @@ strong { font-weight: bold; }
     padding-bottom: 23px;
     background: #f8f8f8;
     border-bottom: 2px solid #9d426b;
+    height: 200px;
 }
 
 .what-we-do .service:hover {

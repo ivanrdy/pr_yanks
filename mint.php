@@ -5,14 +5,14 @@
     include("lib/conn.php");
     include("lib/paginator.php");
     include("views/a_head.php");    
-    // session_start();
+    session_start();
 ?>
     <body class="skin-blue">
 <?php
-        // if(empty($_SESSION['name'])){
-        //     include("error.html");
-        // }else{
-             include("views/a_header.php");
+        if(empty($_SESSION['name'])){
+            header("location:404");
+        }else{
+            include("views/a_header.php");
              	
             	switch($_GET['page']){
 
@@ -33,8 +33,7 @@
                     case 'galeri'               :   include ("views/a_galeri.php");
                                                     break;
                     case 'editgaleri'           :   include ("views/a_edit_galeri.php");
-                                                    break;                            
-                           
+                                                    break;  
                     case 'readMsg'              :   include ("views/a_read.php");                                                       
                                                     break;         
                     case 'paket'                :   include ("views/a_paket.php");                                                                              
@@ -54,7 +53,7 @@
                 }	
 
             include("views/a_footer.php");
-        // }
+        }
 ?>
     </body>
 </html>

@@ -37,7 +37,7 @@
             <li data-id="p-1" data-type="web-design" class="span3">
                 <div class="work">
                     <a href="assets/img/lokasi/<?php echo $r['gambar'] ?>" rel="#">
-                        <img src="assets/img/lokasi/<?php echo $r['gambar'] ?>" alt="">
+                        <img src="assets/img/lokasi/<?php echo $r['gambar'] ?>" style="background-position:center center;height:200px">
                     </a>
                     <h4><?php echo $r['nama'] ?></h4>
                     <p><?php echo $r['deskripsi'] ?>.</p>
