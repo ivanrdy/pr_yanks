@@ -1,4 +1,10 @@
- <html>
+<?php 
+    session_start();
+    if(isset($_SESSION['name'])){
+        header("location:beranda");
+    }
+?>
+<html>
      <head>
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
