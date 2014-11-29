@@ -1,4 +1,4 @@
-ErrorDocument 404 /project/pr_tigatours/error.html
+ErrorDocument 404 /pr_yanks/error.html
 
 RewriteEngine On
 
